@@ -25,7 +25,12 @@ SECRET_KEY = '4_^pm^4--j%(2-wnpy#*9f0dsx4m*(n4!^bl!qlk3$*m32nqzl'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'mysite.ccc.tw.local',
+    '192.168.66.10',
+    'localhost',
+    '127.0.0.1',
+]
 
 
 # Application definition
