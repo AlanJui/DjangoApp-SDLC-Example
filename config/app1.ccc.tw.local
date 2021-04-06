@@ -1,0 +1,41 @@
+upstream django {
+    # for a web port socket
+    # server 127.0.0.1:8001;
+    #server unix:///home/alanjui/www/app1/run/app1.ccc.tw.local.sock;
+    server unix:///run/uwsgi/app1.ccc.tw.local.sock;
+}
+
+server {
+    # the port mysite will be served on
+    # listen 8000;
+
+    server_name app1.ccc.tw.local;
+
+    root /home/alanjui/www/app1;
+    #index index.html;
+
+    #location / {
+    #    try_files $uri $uri/ =404;
+    #}
+    charset utf-8;
+
+    # max upload size
+    client_max_body_size 75M; # adjust to taste
+
+    # Django media
+    location /media {
+        alias /home/alanjui/www/app1/media;
+    }
+
+    # Django static
+    location /static {
+        # alias /home/alanjui/workspace/django/mysite/static_collected;
+        alias /home/alanjui/www/app1/static_files;
+    }
+
+    # Finally, send all non-static, non-media requests to the Django App server.
+    location / {
+        uwsgi_pass  django;
+        include     /etc/nginx/uwsgi_params;
+    }
+}

@@ -20,5 +20,6 @@ __pycache__/
 *~
 # Static files
 static_collected/
+static_files/
 # Temporary
 _bak/

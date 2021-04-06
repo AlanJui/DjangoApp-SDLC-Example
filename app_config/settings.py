@@ -26,7 +26,7 @@ SECRET_KEY = '4_^pm^4--j%(2-wnpy#*9f0dsx4m*(n4!^bl!qlk3$*m32nqzl'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'mysite.ccc.tw.local',
+    'app1.ccc.tw.local',
     '192.168.66.10',
     'localhost',
     '127.0.0.1',
@@ -123,3 +123,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'static_files'
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
