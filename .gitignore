@@ -23,3 +23,5 @@ static_collected/
 static_files/
 # Temporary
 _bak/
+app_config/settings_local.py
+
