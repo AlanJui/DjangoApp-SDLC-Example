@@ -1,5 +1,7 @@
-# settings_local.py
-SECRET_KEY = '4_^pm^4--j%(2-wnpy#*9f0dsx4m*(n4!^bl!qlk3$*m32nqzl'
+# settings/local.py
+# python manage.py runserver --settings=app_config.settings.local
+
+from .base import *
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
