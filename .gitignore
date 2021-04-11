@@ -24,4 +24,4 @@ static_files/
 # Temporary
 _bak/
 app_config/settings_local.py
-
+.env

@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+# to stop uwsgi: sudo /usr/local/bin/uwsgi --stop /tmp/app1-master.pid
+
+sudo /usr/local/bin/uwsgi \
+    --chdir=/home/alanjui/www/app1 \
+    --module=app_config.wsgi:application \
+    --env DJANGO_SETTINGS_MODULE=app_config.settings \
+    --master --pidfile=/tmp/app1-master.pid \
+    --socket=/run/uwsgi/app1.ccc.tw.local.sock \
+    --processes=5 \
+    --harakiri=20 \
+    --max-requests=5000 \
+    --vacuum \
+    --home=/home/alanjui/.pyenv/versions/app1.ccc.tw.local \
+    --daemonize=/var/log/uwsgi/app1.ccc.tw.lolcal.log \
+    --uid www-data --gid www-data

@@ -1,7 +1,7 @@
 upstream django {
     # for a web port socket
-    # server 127.0.0.1:8001;
     #server unix:///home/alanjui/www/app1/run/app1.ccc.tw.local.sock;
+    #server 127.0.0.1:8001;
     server unix:///run/uwsgi/app1.ccc.tw.local.sock;
 }
 
