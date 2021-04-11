@@ -1,0 +1,7 @@
+{
+  "venvPath": "/home/alanjui/.pyenv/versions/3.8.5/envs",
+  "venv": "app1.ccc.tw.local",
+  "reportMissingImports": true,
+  "pythonVersion": "3.8",
+  "exclude": ["**/node_modules", "**/__pycache__"]
+}
